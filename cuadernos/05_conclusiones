@@ -1,0 +1,40 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "426psNdxnt1z"
+      },
+      "source": [
+        "##05_Conclusiones"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WvgSRg9An3BZ"
+      },
+      "source": [
+        "La inspección inicial del dataset original “streaming_users_dirty.json\" nos permitió determinar que éste presentaba un total de 8.160 entradas y 8 columnas, con variables numéricas y categóricas. También pudimos identificar valores faltantes en las columnas “monthly_watch_time_mins”; “favorite_genre”; y “last_login_date”. Con la función describe() obtuvimos el resumen estadístico de las columnas numéricas y la exploración de valores únicos por columna nos mostró los valores atípicos y la falta de normalización en las variables categóricas.\n",
+        "\n",
+        "En la etapa de limpieza del dataset, lo primero que hicimos fue realizar una copia y configurar la auditoría del pipeline para registrar los pasos realizados. Se implementó un filtrado estricto para eliminar los duplicados y remover los registros faltantes sin recurrir a imputaciones artificiales que alteraran la distribución natural de los datos, aplicando winsorización robusta por IQR, lo que recortó con éxito 139 outliers en minutos y 81 outliers en tickets, e imputación diferenciada por mecanismo para llevar los nulos a 0 y lograr así una retención estructural de 98.4%. Además, la transformación de los tipos de datos garantizó la integridad del pipeline, quedando documentada de forma transparente para fines de auditoría.\n",
+        "\n",
+        "El Análisis Exploratorio de Datos (EDA) determinó una fuerte correlación lineal entre la edad de los usuarios y sus minutos de reproducción mensuales, lo que introducía un problema de redundancia estadística para un modelo predictivo posterior. Debido a esto, se aplicó PCA sobre la variables previamente estandarizadas, resolviendo con éxito la redundancia antes mencionada. El modelo concentró la variabilidad en un espacio bidimensional ortogonal e independiente donde PC1 representa un índice de madurez y volumen de consumo general, identificando perfiles estables de usuarios adultos con alta retención y PC2 actúa como un factor de contraste que aísla de forma matemática el fenómeno de “engagement joven”, es decir, menores de edad con consumos de tiempo sumamente agresivos. Esto permitió la retención del 100% de la varianza original, demostrando que no se produjo pérdida de información."
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
