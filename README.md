@@ -60,26 +60,18 @@ PI_Mineria_Datos_1/
 │
 └── logs/
     └── pipeline_log.csv        <-- Registro automatizado de transformaciones
-## 🛠️ Preparación y Calidad de Datos
+## Preparación y calidad de datos
 
-- **Duplicados:** Eliminación de registros duplicados por ID.
-- **Normalización:** Homogeneización de categorías de texto.
-- **Validación lógica:** Corrección de valores lógicamente imposibles.
-- **Tratamiento de Outliers:** Winsorización robusta por IQR para acotar outliers en minutos y tickets.
-- **Imputación de Nulos:** Imputación diferenciada de nulos según el mecanismo de falta.
+Eliminación de registros duplicados por ID. Homogeneización de categorías de texto. Corrección de valores lógicamente imposibles. Winsorización robusta por IQR para acotar outliers en minutos y tickets. Imputación diferenciada de nulos según el mecanismo de falta.
 
----
-
-## 📈 Resumen del Análisis Exploratorio (EDA)
+## Resumen del análisis exploratorio
 
 La fase del EDA automatiza de forma visual las siguientes tareas estadísticas:
-- **Análisis Univariado:** Gráficos univariados para analizar la distribución y frecuencias de cada variable.
-- **Análisis Bivariado:** Gráficos bivariados para evaluar relaciones cruzadas entre los usuarios.
-- **Análisis Multivariado:** Matrices de correlación multivariada para identificar redundancias de información.
+* Gráficos univariados para analizar la distribución y frecuencias de cada variable
+* Gráficos bivariados para evaluar relaciones cruzadas entre los usuarios.
+* Matrices de correlación multivariada para identificar redundancias de información.
 
----
-
-## 📉 Reducción de Dimensionalidad (PCA)
+## Reducción de dimensionalidad
 
 El proceso matemático para remover el acoplamiento de los datos consiste en:
 1. Selección de variables numéricas correlacionadas.
@@ -87,22 +79,22 @@ El proceso matemático para remover el acoplamiento de los datos consiste en:
 3. Aplicación de PCA para transformar las variables en componentes ortogonales.
 4. Exportación de las nuevas coordenadas bidimensionales de los usuarios.
 
----
+## Visualización interactiva
 
-## 🖥️ Visualización Interactiva
+La aplicación web streamlit cloud se organiza en las siguientes pantallas navegables:
+* **Home:** Presentación del equipo, contexto del pipeline y enlace a Github.
+* **Dataset:** Reporte de calidad del proceso y logs de las transformaciones.
+* **EDA:** Gráfico de distribución de histogramas interactivos con selectores.
+* **PCA:** Visualización de la varianza explicada y la proyección espacial de la muestra.
 
-La aplicación web en **Streamlit Cloud** se organiza en las siguientes pantallas navegables:
+## Cómo ejecutar localmente
 
-- **Home:** Presentación del equipo, contexto del pipeline y enlace a GitHub.
-- **Dataset:** Reporte de calidad del proceso y logs de las transformaciones.
-- **EDA:** Gráfico de distribución de histogramas interactivos con selectores.
-- **PCA:** Visualización de la varianza explicada y la proyección espacial de la muestra.
+1. Clonar repositorio e instalar dependencias.
+2. Correr la aplicación interactiva.
 
----
+## Conclusiones
 
-## 🚀 Cómo Ejecutar Localmente
-
-1. Clonar el repositorio e instalar dependencias.
-2. Correr la aplicación interactiva con el comando:
-   ```bash
-   streamlit run app/Home.py
+* Se consolidó un pipeline automatizado reproducible y auditado por logs.
+* El tratamiento robusto garantizó un 98.4% de retención estructural sin sesgar la muestra.
+* El espacio ortogonal de PCA eliminó las redundancias dejándolo óptimo para clustering.
+* Se documentaron las limitaciones del dataset y la necesidad de sumar variables cualitativas a futuro.
