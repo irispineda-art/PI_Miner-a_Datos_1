@@ -1,43 +1,29 @@
 # 📊 Proyecto Integrador: Minería de Datos I
-## Python + Streamlit Status
 
----
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Cloud-red)
+![Status](https://img.shields.io/badge/Estado-Completado-brightgreen)
 
 ## 📌 Información General
 
-**Institución:** Instituto Tecnológico de Santiago del Estero (ITSE)  
-**Materia:** Minería de Datos I (Turno Mañana)  
-**Entrega:** Julio 2026  
-**Integrantes:**  
-- Iris Macarena Pineda
-- Santiago Verón
+* **Institución:** Instituto Tecnológico de Santiago del Estero (ITSE)
+* **Materia:** Minería de Datos I (Turno Mañana)
+* **Entrega:** Julio 2026
+* **Integrantes:** 
+  * Iris Pineda Macarena
+  * Santiago Verón (Sumampa)
 
-**Sede:** Sumampa
-
-Este proyecto desarrolla un pipeline integral e interactivo de Ciencia de Datos aplicado a la auditoría de usuarios de una plataforma de streaming.
-
-El proceso transforma un conjunto de datos crudos (`raw`) que contiene inconsistencias, valores nulos, registros duplicados y valores atípicos en información limpia y estructurada, permitiendo posteriormente realizar análisis exploratorio y reducción de dimensionalidad mediante PCA.
-
-El flujo completo se encuentra documentado mediante notebooks y registros de transformación, y sus resultados son expuestos mediante una aplicación web interactiva desarrollada con Streamlit.
+Este proyecto desarrolla un **pipeline integral e interactivo de Ciencia de Datos** aplicado a la auditoría de usuarios de una plataforma de streaming. Transforma un conjunto de datos crudos (*raw*) con inconsistencias, valores nulos y registros duplicados en conocimientos accionables mediante inspección, limpieza estadística, análisis exploratorio y reducción de dimensionalidad con PCA.
 
 ---
 
 ## 🎯 Objetivos
 
-### Objetivo General
-
-Diseñar y desplegar un pipeline de procesamiento y análisis de datos completamente reproducible que permita transformar datos crudos de usuarios de una plataforma de streaming en información útil para la generación de insights y la toma de decisiones.
-
-### Objetivos Técnicos
-
-- 🔍 Auditar la calidad de los registros iniciales.
-- 🧹 Detectar y corregir inconsistencias en los datos.
-- 📊 Realizar un análisis exploratorio de las variables.
-- 🔗 Identificar relaciones y posibles redundancias entre variables.
-- 🧮 Aplicar reducción de dimensionalidad mediante PCA.
-- 💻 Exponer los resultados mediante una aplicación web interactiva.
-- 📝 Registrar las transformaciones realizadas mediante logs.
-- 🔄 Mantener un pipeline reproducible y documentado.
+- **General:** Diseñar y desplegar un pipeline de procesamiento y análisis de datos completamente reproducible que transforme datos crudos en *insights* estratégicos para el negocio de streaming.
+- **Técnicos:**
+  - Auditar la calidad de los registros iniciales y corregir distorsiones.
+  - Aplicar reducción de dimensionalidad (PCA) para eliminar la redundancia de información.
+  - Exponer todo el flujo de trabajo a través de un panel web interactivo para facilitar la toma de decisiones.
 
 ---
 
@@ -50,11 +36,8 @@ PI_Mineria_Datos_1/
 ├── requirements.txt            <-- Dependencias y librerías del entorno
 │
 ├── data/
-│   ├── raw/                    <-- Dataset original
-│   │   └── streaming_users.json
-│   │
-│   └── processed/              <-- Dataset procesado
-│       └── streaming_users_clean.csv
+│   ├── raw/                    <-- Dataset original ('streaming_users.json')
+│   └── processed/              <-- Dataset limpio ('streaming_users_clean.csv')
 │
 ├── notebooks/
 │   ├── 01_inspeccion_inicial.ipynb
@@ -65,7 +48,6 @@ PI_Mineria_Datos_1/
 │
 ├── app/
 │   ├── Home.py                 <-- Página principal del Dashboard
-│   │
 │   └── pages/
 │       ├── 01_Dataset.py       <-- Reporte de calidad y logs
 │       ├── 02_EDA.py           <-- Análisis exploratorio interactivo
