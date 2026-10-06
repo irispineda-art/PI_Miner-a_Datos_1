@@ -60,3 +60,49 @@ PI_Mineria_Datos_1/
 │
 └── logs/
     └── pipeline_log.csv        <-- Registro automatizado de transformaciones
+## 🛠️ Preparación y Calidad de Datos
+
+- **Duplicados:** Eliminación de registros duplicados por ID.
+- **Normalización:** Homogeneización de categorías de texto.
+- **Validación lógica:** Corrección de valores lógicamente imposibles.
+- **Tratamiento de Outliers:** Winsorización robusta por IQR para acotar outliers en minutos y tickets.
+- **Imputación de Nulos:** Imputación diferenciada de nulos según el mecanismo de falta.
+
+---
+
+## 📈 Resumen del Análisis Exploratorio (EDA)
+
+La fase del EDA automatiza de forma visual las siguientes tareas estadísticas:
+- **Análisis Univariado:** Gráficos univariados para analizar la distribución y frecuencias de cada variable.
+- **Análisis Bivariado:** Gráficos bivariados para evaluar relaciones cruzadas entre los usuarios.
+- **Análisis Multivariado:** Matrices de correlación multivariada para identificar redundancias de información.
+
+---
+
+## 📉 Reducción de Dimensionalidad (PCA)
+
+El proceso matemático para remover el acoplamiento de los datos consiste en:
+1. Selección de variables numéricas correlacionadas.
+2. Escalado y estandarización de los datos.
+3. Aplicación de PCA para transformar las variables en componentes ortogonales.
+4. Exportación de las nuevas coordenadas bidimensionales de los usuarios.
+
+---
+
+## 🖥️ Visualización Interactiva
+
+La aplicación web en **Streamlit Cloud** se organiza en las siguientes pantallas navegables:
+
+- **Home:** Presentación del equipo, contexto del pipeline y enlace a GitHub.
+- **Dataset:** Reporte de calidad del proceso y logs de las transformaciones.
+- **EDA:** Gráfico de distribución de histogramas interactivos con selectores.
+- **PCA:** Visualización de la varianza explicada y la proyección espacial de la muestra.
+
+---
+
+## 🚀 Cómo Ejecutar Localmente
+
+1. Clonar el repositorio e instalar dependencias.
+2. Correr la aplicación interactiva con el comando:
+   ```bash
+   streamlit run app/Home.py
