@@ -59,3 +59,22 @@ PI_Mineria_Datos_1/
 │
 └── logs/
     └── pipeline_log.csv        <-- Registro automatizado de transformaciones
+
+## 🧹 Preparación y Calidad de Datos
+La primera etapa del proyecto se enfoca en evaluar y mejorar la calidad del dataset original.
+
+Se aplicaron diferentes técnicas de preparación y limpieza:
+🗑️ Eliminación de registros duplicados: se identificaron registros repetidos utilizando el ID del usuario.
+
+🔤 Homogeneización de categorías: se normalizaron valores de texto para evitar categorías equivalentes representadas de diferentes maneras.
+
+⚠️ Corrección de valores lógicamente imposibles: se detectaron y corrigieron valores incompatibles con el contexto de las variables.
+
+📉 Tratamiento de valores atípicos: se aplicó winsorización robusta mediante el método del IQR para limitar la influencia de valores extremos en variables como minutos y tickets.
+
+🧩 Imputación de valores nulos: los valores faltantes fueron tratados de acuerdo con la naturaleza y mecanismo de ausencia de cada variable.
+
+📝 Registro de transformaciones: todas las operaciones realizadas fueron registradas en pipeline_log.csv.
+
+El resultado de esta etapa es un dataset limpio y estructurado que puede ser utilizado para las etapas posteriores de análisis.
+
