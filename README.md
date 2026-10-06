@@ -10,8 +10,9 @@
 * **Materia:** Minería de Datos I (Turno Mañana)
 * **Entrega:** Julio 2026
 * **Integrantes:** 
-  * Iris Pineda Macarena
-  * Santiago Verón (Sumampa)
+  * Iris Macarena Pineda 
+  * Santiago Verón
+* **Sede Sumampa**
 
 Este proyecto desarrolla un **pipeline integral e interactivo de Ciencia de Datos** aplicado a la auditoría de usuarios de una plataforma de streaming. Transforma un conjunto de datos crudos (*raw*) con inconsistencias, valores nulos y registros duplicados en conocimientos accionables mediante inspección, limpieza estadística, análisis exploratorio y reducción de dimensionalidad con PCA.
 
