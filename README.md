@@ -60,7 +60,7 @@ PI_Mineria_Datos_1/
 └── logs/
     └── pipeline_log.csv        <-- Registro automatizado de transformaciones
 
-## 🧹 Preparación y Calidad de Datos
+## 🧹 **Preparación y Calidad de Datos**
 La primera etapa del proyecto se enfoca en evaluar y mejorar la calidad del dataset original.
 
 Se aplicaron diferentes técnicas de preparación y limpieza:
