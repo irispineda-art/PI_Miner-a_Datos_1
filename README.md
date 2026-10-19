@@ -6,7 +6,7 @@
 
 > Pipeline reproducible de Ciencia de Datos para la auditoría de usuarios de una plataforma de streaming: inspección, limpieza, análisis exploratorio y reducción dimensional con PCA, expuesto en una app web interactiva.
 
-🔗 **Demo en vivo:** [Ver aplicación en Streamlit Cloud](https://TU-ENLACE-AQUI.streamlit.app)
+🔗 **Demo en vivo:** [Ver aplicación en Streamlit Cloud](https://yzbu2kwpecop22hhwf4nd7.streamlit.app/)
 
 ---
 
